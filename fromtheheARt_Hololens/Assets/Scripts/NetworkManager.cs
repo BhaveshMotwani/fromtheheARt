@@ -64,5 +64,4 @@ public class NetworkManager : MonoBehaviour {
         PhotonNetwork.Instantiate(LhandPrefab.name, LHandPosition.transform.position, LHandPosition.transform.rotation, 0);
         PhotonNetwork.Instantiate(RhandPrefab.name, RHandPosition.transform.position, RHandPosition.transform.rotation, 0);
     }
-
 }

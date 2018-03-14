@@ -6,6 +6,8 @@ public class GyroControl : MonoBehaviour {
 
 	private bool gyroEnabled;
 	private Gyroscope gyro;
+    public GameObject Bubble;
+    float debugVal =0;
 
 	// // Use this for initialization
 	private void Start () {
@@ -28,13 +30,16 @@ public class GyroControl : MonoBehaviour {
 
         GUILayout.Label("Orientation: " + Screen.orientation);
         GUILayout.Label("input.gyro.attitude: " + Input.gyro.attitude);
-		GUILayout.Label("intput.gyro.euler: " + Input.gyro.attitude.eulerAngles.ToString());
+		GUILayout.Label("intput.gyro.euler: " + (Input.gyro.attitude.eulerAngles.z%10).ToString());
+        GUILayout.Label("intput.gyro.acceleration: " + Input.acceleration.ToString());
     }
+
 
 
 	// // Update is called once per frame
 	private void Update() {
-		transform.rotation = GyroToUnity(Input.gyro.attitude);
+		//transform.rotation = GyroToUnity(Input.gyro.attitude);
+        Bubble.transform.localScale = new Vector3(Input.gyro.attitude.eulerAngles.z%10, Input.gyro.attitude.eulerAngles.z % 10, Input.gyro.attitude.eulerAngles.z % 10);
 	}	
 
 	private static Quaternion GyroToUnity(Quaternion q)

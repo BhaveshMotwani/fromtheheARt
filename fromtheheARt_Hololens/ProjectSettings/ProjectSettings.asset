@@ -155,7 +155,7 @@ PlayerSettings:
     Android: com.fromtheheARt.NetworkedheARt
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
+  AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 25
   AndroidPreferredInstallLocation: 1
   aotOptions: 
