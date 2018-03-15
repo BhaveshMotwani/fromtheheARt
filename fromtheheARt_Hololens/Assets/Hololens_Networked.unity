@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &93341369
 Transform:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e0d0cd8fb90504896586bc791d5156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headPrefab: {fileID: 1028329742681592, guid: e11cf1b8930116a479ecf2cfd46aac5d, type: 2}
+  headPrefab: {fileID: 1384447544809670, guid: 46ecfb9ffe420cf42baa7feb44dd6c1a, type: 2}
   Version: 1
   HMD: {fileID: 1209451665}
   LHandPosition: {fileID: 1328868937}
@@ -441,13 +441,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 826485140}
+  - component: {fileID: 826485141}
   m_Layer: 0
   m_Name: Hololens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &826485140
 Transform:
   m_ObjectHideFlags: 0
@@ -465,6 +466,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &826485141
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826485139}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &843457137
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5ef0b11db3c4d45af20d0cf7d00dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bubble: {fileID: 1782262108}
+  Bubble: {fileID: 1028329742681592, guid: e11cf1b8930116a479ecf2cfd46aac5d, type: 2}
 --- !u!114 &1209451667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,14 +866,19 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114829819257867608, guid: e11cf1b8930116a479ecf2cfd46aac5d,
+        type: 2}
+      propertyPath: m_RotationModel.SynchronizeEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114829819257867608, guid: e11cf1b8930116a479ecf2cfd46aac5d,
+        type: 2}
+      propertyPath: m_PositionModel.SynchronizeEnabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e11cf1b8930116a479ecf2cfd46aac5d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1782262108 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1028329742681592, guid: e11cf1b8930116a479ecf2cfd46aac5d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1782262107}
 --- !u!1 &2080527707
 GameObject:
   m_ObjectHideFlags: 0
