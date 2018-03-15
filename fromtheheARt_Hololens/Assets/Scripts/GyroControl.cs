@@ -38,7 +38,7 @@ public class GyroControl : MonoBehaviour {
 
 	// // Update is called once per frame
 	private void Update() {
-		//transform.rotation = GyroToUnity(Input.gyro.attitude);
+		transform.rotation = GyroToUnity(Input.gyro.attitude);
         Bubble.transform.localScale = new Vector3(Input.gyro.attitude.eulerAngles.z%10, Input.gyro.attitude.eulerAngles.z % 10, Input.gyro.attitude.eulerAngles.z % 10);
 	}	
 
